@@ -1,29 +1,19 @@
 {
-
   "manifest_version": 2,
   "name": "FuCan",
   "short_name": "FUCaN",
-  "version": "2.18",
-  "author": "Jonas Emrich",
-  "developer": {
-    "name": "Jonas Emrich",
-    "url": "https://jonasemrich.de/better-tucan-darkmode-und-statistiken-fur-tucan/"
-  },
+  "version": "1.1",
+  "author": "Joshua Hatzinger",
   "content_security_policy": "default-src 'self';  script-src 'self' ; object-src 'self'",
-  "description": "F*ck TuCan standard design and make it clean", "browser_specific_settings": {
-    "gecko": {
-      "update_url": "https://jonasemrich.de/addon/better-tucan/updates.json"
-    }
-  },
-  "homepage_url": "https://jonasemrich.de/better-tucan-darkmode-und-statistiken-fur-tucan/",
+  "description": "F*ck TuCan standard design and make it clean. Credits to https://github.com/JonasEmrich/Better-TUCaN for Dark theme and statistics", 
   "icons": {
     "48": "icons/icon_48.png",
     "96": "icons/icon_96.png",
     "192": "icons/icon_192.png",
     "512": "icons/icon_512.png"
   },
-
   "content_scripts": [
+    
     {
       "matches": ["*://*.tucan.tu-darmstadt.de/*"],
       "css": ["css/style.css"],
@@ -36,14 +26,18 @@
       "run_at": "document_end"
     }
   ],
-  
   "web_accessible_resources": [
     "src/fa-solid-900.woff2",
     "src/DMSans-Regular.ttf",
     "img/tu-logo.png",
     "img/tucan-logo.png",
     "img/Fucan.png",
-    "img/Fucan_dark.png"
+    "img/Fucan_dark.png",
+    "fontawesome/css/fontawesome.min.css",
+    "fontawesome/css/all.css",
+    "fontawesome/js/fontawesome.js",  
+    "fontawesome/webfonts/*"
+
   ]
 
 }

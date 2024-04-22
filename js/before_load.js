@@ -8,4 +8,7 @@ jq.append(src);
 document.getElementsByTagName('head')[0].appendChild(jq);
 const navigation = document.getElementById("pageTopNavi");
 navigation.style.backgroundImage = 'url("' + chrome.runtime.getURL("img/Fucan_dark.png") + '")';
+const body = document.body
+body.innerHTML = '<link rel="stylesheet" href="' + chrome.runtime.getURL("fontawesome/css/all.css") + '"/>' + '<script src="' + chrome.runtime.getURL("fontawesome/js/all.js") + '"></script>'  + document.body.innerHTML
+
 }
