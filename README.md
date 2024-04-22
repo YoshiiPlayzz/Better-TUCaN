@@ -2,7 +2,8 @@
 ## (F*ck TuCan standard design and make it clean)
 This Addon redesigns the TuCan webpage![Tucan webpage](github/view_29_10.png)
 It is still Work in Progress so don't expect much of it
-
+## Credits
+Credits to Jonas Emrich´s project [BetterTUCaN](https://github.com/JonasEmrich/Better-TUCaN) for for Dark theme and statistics
 ## How to install
 1. Download repository as .zip file ![Download zip-File](github/image.png)
 2. Open browser [extension settings](chrome://extensions) `chrome://extensions`
@@ -26,4 +27,5 @@ It is still Work in Progress so don't expect much of it
 - resources (like fontawesome) aren't loaded correctly...
 - make logo fitting to dark mode
 - english page is not working correctly
-- ~~If there are no appointments on "My TUCan" there will nothing be replaced~~
+## Disclaimer
+The original "TUCaN" Logo and the Logo of "Technische University Darmstadt" belongs and is property of the Technische University Darmstadt
