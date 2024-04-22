@@ -1,8 +1,8 @@
 {
 
   "manifest_version": 2,
-  "name": "Better TUCaN - DarkMode und Stats for TUCaN",
-  "short_name": "Better TUCaN",
+  "name": "FuCan",
+  "short_name": "FUCaN",
   "version": "2.18",
   "author": "Jonas Emrich",
   "developer": {
@@ -10,8 +10,7 @@
     "url": "https://jonasemrich.de/better-tucan-darkmode-und-statistiken-fur-tucan/"
   },
   "content_security_policy": "default-src 'self';  script-src 'self' ; object-src 'self'",
-  "description": "Inoffizielles Add-On, welches das Design der www.tucan.tu-darmstadt.de Webseite in ein dunkles augenfreundliches Design ändert und Statsistiken bei den Notenspiegeln einfügt.",
-  "browser_specific_settings": {
+  "description": "F*ck TuCan standard design and make it clean", "browser_specific_settings": {
     "gecko": {
       "update_url": "https://jonasemrich.de/addon/better-tucan/updates.json"
     }
@@ -37,11 +36,14 @@
       "run_at": "document_end"
     }
   ],
+  
   "web_accessible_resources": [
     "src/fa-solid-900.woff2",
     "src/DMSans-Regular.ttf",
     "img/tu-logo.png",
-    "img/tucan-logo.png"
+    "img/tucan-logo.png",
+    "img/Fucan.png",
+    "img/Fucan_dark.png"
   ]
 
 }

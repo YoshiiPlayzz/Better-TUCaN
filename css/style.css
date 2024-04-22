@@ -422,3 +422,43 @@ select, option{
   text-align: right;
   color: gray !important;
 }
+elements{
+  border: 2px solid #212121;
+  border-radius: 5px;
+  margin: 5px;
+  background: #121212;
+  
+}
+.elements > h3, h4, h5{
+  color: white;
+  font-weight: lighter;
+  text-align: center;
+}
+.elements > h3{
+  font-weight: bold;
+}
+.footerLink{
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.parent{
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr);
+}
+.parent :first-child {
+  text-align: center;
+  grid-column: 1 / -1;
+}
+#pageContainer{
+  background: #121212;
+  border: none;
+}
+#pageFoot{
+  background: #121212;
+  border: none;
+}
+#pageHeadBottom_3{
+  border-bottom: none;
+}
