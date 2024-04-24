@@ -1,10 +1,9 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "FuCan",
   "short_name": "FUCaN",
   "version": "1.1",
   "author": "Joshua Hatzinger",
-  "content_security_policy": "default-src 'self';  script-src 'self' ; object-src 'self'",
   "description": "F*ck TuCan standard design and make it clean. Credits to https://github.com/JonasEmrich/Better-TUCaN for Dark theme and statistics", 
   "icons": {
     "48": "icons/icon_48.png",
@@ -27,17 +26,25 @@
     }
   ],
   "web_accessible_resources": [
-    "src/fa-solid-900.woff2",
-    "src/DMSans-Regular.ttf",
-    "img/tu-logo.png",
-    "img/tucan-logo.png",
-    "img/Fucan.png",
-    "img/Fucan_dark.png",
-    "fontawesome/css/fontawesome.min.css",
-    "fontawesome/css/all.css",
-    "fontawesome/js/fontawesome.js",  
-    "fontawesome/webfonts/*"
-
+    {"resources":[
+      "img/*"
+    ],  
+    "matches": ["*://*.tucan.tu-darmstadt.de/*"]
+    },
+    {"resources":[
+      "src/fa-solid-900.woff2",
+      "src/DMSans-Regular.ttf",
+      "fontawesome/webfonts/*"
+    ], 
+    "matches": ["*://*.tucan.tu-darmstadt.de/*"]
+    },
+    {"resources":[
+      "fontawesome/css/fontawesome.min.css",
+      "fontawesome/css/all.css",
+      "fontawesome/js/fontawesome.js"
+    ], 
+    "matches": ["*://*.tucan.tu-darmstadt.de/*"]
+    }
   ]
 
 }
