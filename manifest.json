@@ -5,6 +5,7 @@
   "version": "1.1",
   "author": "Joshua Hatzinger",
   "description": "F*ck TuCan standard design and make it clean. Credits to https://github.com/JonasEmrich/Better-TUCaN for Dark theme and statistics", 
+  "permissions": ["scripting", "activeTab"],
   "icons": {
     "48": "icons/icon_48.png",
     "96": "icons/icon_96.png",
@@ -15,10 +16,11 @@
     
     {
       "matches": ["*://*.tucan.tu-darmstadt.de/*"],
-      "css": ["css/style.css"],
-      "js": ["js/before_load.js", "js/jquery.js"],
-      "run_at": "document_start"
+      "css": ["css/style.css", "fontawesome/css/all.css"],
+      "js": ["js/jquery.js", "js/before_load.js","fontawesome/js/all.js"],
+      "run_at": "document_idle"
     },
+
     {
       "matches": ["*://*.tucan.tu-darmstadt.de/*"],
       "js": ["js/script.js"],

@@ -1,3 +1,5 @@
+
+
 //PAGES
 const START = "Start"
 const VV = "Vorlesungsverzeichnis"
@@ -11,7 +13,7 @@ const SPECIAL_PAGES = {
   VV: ["PRGNAME=ACTION", ]
 
 }
-console.log(PAGES.GRADES)
+
 function max(arr){
   return Math.max.apply(null, arr);
 }
@@ -19,6 +21,21 @@ function max(arr){
 function sum(arr){
   return  arr.reduce((a, b) => a + b, 0);
 }
+function getTabID() {
+  return new Promise((resolve, reject) => {
+      try {
+          chrome.tabs.query({
+              active: true,
+          }, function (tabs) {
+              resolve(tabs[0].id);
+          })
+      } catch (e) {
+          reject(e);
+      }
+  })
+}
+
+
 /*
 function gradeoverview(){
   labels = [];
@@ -78,6 +95,7 @@ nls.display = "block"
 nls.listStyleType = "none"
 
 let navigation_icons = {
+  "Startseite": "<i style='color: white;' class='fa-solid fa-home'></i> Startseite",
    "Aktuelles": '<i style="color: white;" class="fa-solid fa-newspaper"></i> Aktuelles',
    "My TUCaN": '<i style="color: white;" class="fa-solid fa-newspaper"></i> My TUCaN',
    "Hilfe": '<i style="color: white;" class="fa-solid fa-question"></i> Hilfe',
