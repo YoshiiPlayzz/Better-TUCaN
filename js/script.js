@@ -65,11 +65,80 @@ alert(max());
 //moz-extension://0058ebac-72f6-41e1-86b4-d3dba5cec76e/img/tu-logo.png
 
 var url = window.location.href;
+const navigation = document.getElementById("pageTopNavi");
 
+const navigation_list = navigation.getElementsByTagName("ul")[0]
+const nls = navigation_list.style
+//Stylen
+nls.alignContent = "center"
+nls.margin = 0
+
+nls.width = "80vw"
+nls.display = "block"
+nls.listStyleType = "none"
+
+let navigation_icons = {
+   "Aktuelles": '<i style="color: white;" class="fa-solid fa-newspaper"></i> Aktuelles',
+   "My TUCaN": '<i style="color: white;" class="fa-solid fa-newspaper"></i> My TUCaN',
+   "Hilfe": '<i style="color: white;" class="fa-solid fa-question"></i> Hilfe',
+   "Help": '<i style="color: white;" class="fa-solid fa-question"></i> Help',
+   "Bewerbung": '<i style="color: white;" class="fa-solid fa-file-pdf"></i> Bewerbung',
+   "Application": '<i style="color: white;" class="fa-solid fa-file-pdf"></i> Application',
+   "Service": '<i style="color: white;" class="fa-solid fa-cog"></i> Service',
+   "Examinations": '<i style="color: white;" class="fa-solid fa-graduation-cap"></i> Examinations',
+   "Prüfungen": '<i style="color: white;" class="fa-solid fa-graduation-cap"></i> Prüfungen',
+   "VV": '<i style="color: white;" class="fa-solid fa-box-archive"></i> Vorlesungsverzeichnis',
+   "Courses": '<i style="color: white;" class="fa-solid fa-archive"></i> Courses',
+   "Stundenplan": '<i style="color: white;" class="fa-solid fa-clock"></i> Stundenplan',
+   "Schedule": '<i style="color: white;" class="fa-solid fa-clock"></i> Schedule',
+   "Veranstaltungen": '<i style="color: white;" class="fa-solid fa-calendar-days"></i> Veranstaltungen',
+   "Course Catalogue": '<i style="color: white;" class="fa-solid fa-calendar-days"></i> Course Catalogue'
+}
+
+const language = document.getElementById("pageHeadSwitchLang").getElementsByTagName("a")[0]
+language.classList = null
+
+let list_style = "display: block;padding: 8px;background-color: #212121; border: none; color: white; float: left;"
+
+language.style = list_style
+
+language.innerHTML = '<i style="color: white;" class="fa-solid fa-flag"></i> ' + language.textContent
+const lang_el = document.createElement("li")
+lang_el.appendChild(language)
+
+const logout = document.getElementById("logoutButton")
+logout.classList.remove("img_arrowLogout")
+logout.classList.remove("img")
+logout.innerHTML = '<i style="color: white;" class="fa-solid fa-right-from-bracket"></i> Abmelden'
+logout.style.backgroundImage = ""
+logout.classList.remove("logout")
+logout.style.border = "none"
+logout.style = list_style
+
+
+navigation_list.appendChild(lang_el)
+navigation_list.appendChild(logout)
+
+for (item in navigation_list.getElementsByTagName("li")) {
+  const li = navigation_list.getElementsByTagName("li")[item];
+
+  if (li.className == "tree depth_1 linkItem branchLinkItem " || li.title == "Hilfe" || li.title == "Help") {
+     li.style.padding = 0
+     li.style.marginBottom = "4px"
+     const link = li.getElementsByClassName("navLink")[0]
+     link.style = list_style
+     if (navigation_icons[link.textContent] != null) link.innerHTML = navigation_icons[link.textContent]
+     if (link.getAttribute("href") == document.location.href.replace(document.location.hostname, "").split("//")[1]) {
+        link.style.color = "#b1bd00"
+     }
+
+  }
+}
 if(url.includes(PAGES.START)){
 
   
 const header = document.getElementById("contentSpacer_IE").getElementsByTagName("h2")[1];
+
 
 
 //Aktuelles

@@ -413,8 +413,8 @@ ul.courseList li.courseListCellHover.numout3{
   background-size: cover;
 }
 select, option{
-	background-color: #111827 !important
-  color: white !important
+	background-color: #111827 !important;
+  color: white !important;
 }
 
 .credit{
@@ -461,4 +461,12 @@ elements{
 }
 #pageHeadBottom_3{
   border-bottom: none;
+}
+
+.inputFieldLabel > input, select, textarea{
+  color: #000!important;
+}
+
+.inputFieldLabel > textarea:focus, input:focus {
+  color: #000!important;
 }

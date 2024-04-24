@@ -28,4 +28,4 @@ Credits to Jonas Emrich´s project [BetterTUCaN](https://github.com/JonasEmrich/
 - make logo fitting to dark mode
 - english page is not working correctly
 ## Disclaimer
-The original "TUCaN" Logo and the Logo of "Technische University Darmstadt" belongs and is property of the Technische University Darmstadt
+The original "TUCaN" Logo and the Logo of "Technische University Darmstadt" belongs and is property of the Technische University Darmstadt 
